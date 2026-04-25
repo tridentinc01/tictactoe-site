@@ -1,148 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Tic Tac Toe</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont,
-                         'Segoe UI', Roboto, sans-serif;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            color: #333;
-            line-height: 1.7;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0" />
+  <meta name="description"
+    content="Privacy Policy for TicTacToe:
+    Classic Board Game by Trident Inc." />
+  <title>Privacy Policy — TicTacToe
+    | Trident Inc</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        h1 {
-            font-size: 28px;
-            color: #1A1A2E;
-            margin-bottom: 4px;
-        }
+    :root {
+      --navy:   #1A1A2E;
+      --purple: #7C4DFF;
+      --coral:  #FF6B35;
+      --text:   #2D2D2D;
+      --muted:  #666666;
+      --bg:     #F7F8FA;
+      --white:  #FFFFFF;
+      --border: #E8EAED;
+    }
 
-        .updated {
-            color: #888;
-            font-size: 14px;
-            margin-bottom: 40px;
-        }
+    body {
+      font-family: -apple-system,
+        BlinkMacSystemFont, 'Segoe UI',
+        Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-        h2 {
-            font-size: 18px;
-            color: #1A1A2E;
-            margin-top: 36px;
-            margin-bottom: 12px;
-            padding-bottom: 6px;
-            border-bottom: 2px solid #f0f0f0;
-        }
+    /* ── HEADER BANNER ────────────────── */
+    .header-banner {
+      background: linear-gradient(
+        135deg,
+        var(--navy),
+        var(--purple));
+      color: var(--white);
+      padding: 36px 20px;
+      text-align: center;
+    }
 
-        p { margin-bottom: 14px; }
+    .header-banner .app-icon {
+      font-size: 48px;
+      display: block;
+      margin-bottom: 12px;
+    }
 
-        ul {
-            margin: 12px 0 12px 20px;
-        }
+    .header-banner h1 {
+      font-size: clamp(20px, 4vw, 26px);
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
 
-        ul li { margin-bottom: 6px; }
+    .header-banner p {
+      font-size: 14px;
+      opacity: 0.72;
+    }
 
-        a {
-            color: #7C4DFF;
-            text-decoration: none;
-        }
+    /* ── CONTENT WRAPPER ──────────────── */
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 36px 20px 60px;
+    }
 
-        a:hover { text-decoration: underline; }
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--purple);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      background: #F0EBFF;
+      border-radius: 8px;
+      padding: 8px 16px;
+      margin-bottom: 28px;
+      transition: background 0.2s;
+    }
 
-        .back {
-            display: inline-block;
-            margin-bottom: 32px;
-            color: #7C4DFF;
-            font-size: 14px;
-        }
+    .back-link:hover {
+      background: #E4D9FF;
+    }
 
-        footer {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 13px;
-            color: #aaa;
-        }
-    </style>
+    /* Updated badge */
+    .updated-badge {
+      display: inline-block;
+      background: #E8F5E9;
+      color: #2E7D32;
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    /* Section card */
+    .section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 26px;
+      margin-bottom: 14px;
+      box-shadow: 0 1px 4px
+        rgba(0,0,0,0.04);
+    }
+
+    .section h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2 .icon {
+      font-size: 20px;
+    }
+
+    .section p {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 12px;
+      line-height: 1.75;
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section ul {
+      margin: 10px 0 12px 18px;
+    }
+
+    .section ul li {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 7px;
+      line-height: 1.6;
+    }
+
+    /* Highlight box */
+    .highlight {
+      background: #F3F0FF;
+      border-left: 4px solid var(--purple);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #4527A0;
+      line-height: 1.6;
+    }
+
+    /* Text links */
+    a.text-link {
+      color: var(--purple);
+      text-decoration: none;
+    }
+
+    a.text-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ── CONTACT CARD ─────────────────── */
+    .contact-card {
+      background: linear-gradient(
+        135deg,
+        var(--navy),
+        var(--purple));
+      color: var(--white);
+      border-radius: 18px;
+      padding: 28px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .contact-card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      opacity: 0.72;
+      margin-bottom: 18px;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      background: var(--white);
+      color: var(--navy);
+      border-radius: 10px;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .contact-card a:hover {
+      opacity: 0.88;
+    }
+
+    /* ── FOOTER ───────────────────────── */
+    .page-footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #AAAAAA;
+    }
+
+    .page-footer a {
+      color: var(--purple);
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 
-    <a class="back" href="/">← Back to Home</a>
-
+  <!-- ── HEADER ─────────────────────── -->
+  <div class="header-banner">
+    <span class="app-icon">⭕</span>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: Aril 16, 2026</p>
+    <p>TicTacToe: Classic Board Game
+      &nbsp;·&nbsp; Trident Inc</p>
+  </div>
 
-    <h2>1. Introduction</h2>
-    <p>This Privacy Policy explains how Tic Tac Toe: Classic Board Game
-    ("we", "our", or "the app") handles information when you use our
-    application. We are committed to protecting your privacy.</p>
+  <div class="content">
 
-    <h2>2. Information We Collect</h2>
-    <p>The app itself does not collect, store, or transmit any personally
-    identifiable information. We do not require account registration
-    or login.</p>
-    <p>The following data is stored locally on your device only and
-    never transmitted:</p>
-    <ul>
-        <li>Game scores (wins, draws, losses)</li>
-        <li>Selected theme preference</li>
-        <li>Sound on/off preference</li>
+    <a href="index.html"
+      class="back-link">
+      ← Back to Home
+    </a>
+
+    <div>
+      <span class="updated-badge">
+        ✓ Last updated: April 11, 2026
+      </span>
+    </div>
+
+    <!-- 1. Introduction -->
+    <div class="section">
+      <h2>
+        <span class="icon">👋</span>
+        1. Introduction
+      </h2>
+      <p>This Privacy Policy explains how
+        <strong>TicTacToe: Classic Board
+        Game</strong> ("we", "our", or
+        "the app"), developed by
+        <strong>Trident Inc</strong>,
+        handles information when you use
+        our Android application.</p>
+      <p>We are committed to protecting
+        your privacy. This policy describes
+        what data is collected, how it is
+        used, and what choices you have.
+      </p>
+      <div class="highlight">
+        The app itself does not collect any
+        personally identifiable information.
+        No account registration or login is
+        ever required to play.
+      </div>
+    </div>
+
+    <!-- 2. Local Data -->
+    <div class="section">
+      <h2>
+        <span class="icon">📱</span>
+        2. Data Stored Locally on Your
+        Device
+      </h2>
+      <p>The following data is stored
+        <strong>only on your device</strong>
+        using Android SharedPreferences and
+        is never transmitted to any server
+        or third party:</p>
+      <ul>
+        <li>Game scores
+          (wins, draws, losses)</li>
+        <li>Selected visual theme
+          preference</li>
+        <li>Sound on / off preference</li>
         <li>AI difficulty preference</li>
-    </ul>
+        <li>Language preference</li>
+      </ul>
+      <p>All of this data is permanently
+        deleted when you uninstall the app.
+      </p>
+    </div>
 
-    <h2>3. Advertising</h2>
-    <p>This app uses Google AdMob to display advertisements. AdMob may
-    collect and use data to serve personalized or non-personalized ads
-    depending on your consent choices. This includes:</p>
-    <ul>
-        <li>Advertising ID (resettable device identifier)</li>
-        <li>IP address (used for approximate location to serve
-            regional ads)</li>
-        <li>App interaction data</li>
-    </ul>
-    <p>For users in the European Economic Area (EEA) and United Kingdom,
-    we display a consent form before showing any ads, in compliance with
-    GDPR. You may withdraw or change your consent at any time using the
-    "Ad Privacy Settings" option in the app.</p>
-    <p>For more information on how Google uses advertising data, visit:
-    <a href="https://policies.google.com/technologies/ads" target="_blank">
-    policies.google.com/technologies/ads</a></p>
+    <!-- 3. Camera -->
+    <div class="section">
+      <h2>
+        <span class="icon">📷</span>
+        3. Camera Access (AR Mode)
+      </h2>
+      <p>The app includes an optional
+        <strong>Augmented Reality (AR)
+        Board Mode</strong> powered by
+        Google ARCore. When you use AR mode
+        the app requests access to your
+        device camera.</p>
+      <ul>
+        <li>Camera access is used solely
+          to render the AR game board on
+          real surfaces</li>
+        <li>No camera images or video are
+          recorded, stored or transmitted
+          </li>
+        <li>Camera permission is only
+          requested when you tap "Play in
+          Augmented Reality"</li>
+        <li>AR mode is entirely optional —
+          the app works fully without it
+          </li>
+      </ul>
+      <div class="highlight">
+        Camera data never leaves your
+        device. It is processed in real
+        time by ARCore on-device only and
+        is never uploaded or shared.
+      </div>
+    </div>
 
-    <h2>4. Children's Privacy</h2>
-    <p>This app is not directed at children under the age of 13. We do
-    not knowingly collect personal information from children.</p>
+    <!-- 4. Advertising -->
+    <div class="section">
+      <h2>
+        <span class="icon">📢</span>
+        4. Advertising (Google AdMob)
+      </h2>
+      <p>This app uses
+        <strong>Google AdMob</strong>
+        to display advertisements. AdMob
+        may collect and use data to serve
+        personalised or non-personalised
+        ads depending on your consent
+        choices.</p>
+      <p>Data AdMob may collect includes:
+      </p>
+      <ul>
+        <li>Advertising ID — a resettable
+          device identifier</li>
+        <li>Approximate location — derived
+          from IP address for regional
+          ad targeting</li>
+        <li>App interaction data — for
+          ad performance analytics</li>
+        <li>Device information — for
+          ad compatibility</li>
+      </ul>
+      <div class="highlight">
+        📍 For users in the European
+        Economic Area (EEA) and United
+        Kingdom, we display a GDPR consent
+        form before showing any ads. You
+        can change your consent at any time
+        via "Ad Privacy Settings" inside
+        the app.
+      </div>
+      <p>For more information on how Google
+        uses advertising data visit:
+        <a class="text-link"
+          href="https://policies.google.com/technologies/ads"
+          target="_blank">
+          policies.google.com/technologies/ads
+        </a>
+      </p>
+    </div>
 
-    <h2>5. Data Retention</h2>
-    <p>All locally stored preferences and scores remain on your device
-    until you uninstall the app. Uninstalling the app permanently
-    deletes all local data.</p>
+    <!-- 5. Data Security -->
+    <div class="section">
+      <h2>
+        <span class="icon">🔒</span>
+        5. Data Security
+      </h2>
+      <p>All data transmitted between the
+        app and third-party services
+        including Google AdMob is encrypted
+        using HTTPS / TLS. Local data
+        stored on your device is protected
+        by Android's built-in application
+        sandboxing.</p>
+    </div>
 
-    <h2>6. Third-Party Services</h2>
-    <p>This app uses the following third-party services:</p>
-    <ul>
-        <li><a href="https://policies.google.com/privacy" target="_blank">
-            Google AdMob</a></li>
-        <li><a href="https://policies.google.com/privacy" target="_blank">
-            Google Play Services</a></li>
-        <li><a href="https://policies.google.com/privacy" target="_blank">
-            Google User Messaging Platform (UMP)</a></li>
-    </ul>
+    <!-- 6. Children's Privacy -->
+    <div class="section">
+      <h2>
+        <span class="icon">👶</span>
+        6. Children's Privacy
+      </h2>
+      <p>This app is not directed at
+        children under the age of 13. We
+        do not knowingly collect personal
+        information from children. Our
+        advertising is configured with
+        <code>tagForChildDirectedTreatment
+        </code> set to
+        <code>false</code>.</p>
+      <p>If you believe a child has
+        provided personal information
+        please contact us at
+        <a class="text-link"
+          href=
+          "mailto:trident.inc01@gmail.com">
+          trident.inc01@gmail.com
+        </a>
+        and we will take appropriate
+        action.</p>
+    </div>
 
-    <h2>7. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Changes will
-    be posted at this URL with an updated date. Continued use of the app
-    after changes constitutes acceptance of the updated policy.</p>
+    <!-- 7. Data Deletion -->
+    <div class="section">
+      <h2>
+        <span class="icon">🗑</span>
+        7. Data Deletion
+      </h2>
+      <p>You can delete all data associated
+        with this app in two ways:</p>
+      <ul>
+        <li><strong>Uninstall the app
+          </strong> — permanently removes
+          all locally stored data
+          immediately</li>
+        <li><strong>Reset Advertising ID
+          </strong> — go to device
+          <em>Settings → Privacy → Ads →
+          Delete advertising ID</em> to
+          remove AdMob's identifier</li>
+      </ul>
+    </div>
 
-    <h2>8. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please
-    contact us at:
-    <a href="mailto:your@email.com">your@email.com</a></p>
+    <!-- 8. Third-Party Services -->
+    <div class="section">
+      <h2>
+        <span class="icon">🔗</span>
+        8. Third-Party Services
+      </h2>
+      <p>This app integrates the following
+        third-party services, each governed
+        by their own privacy policies:</p>
+      <ul>
+        <li>
+          <a class="text-link"
+            href=
+            "https://policies.google.com/privacy"
+            target="_blank">
+            Google AdMob
+          </a>
+          — advertising
+        </li>
+        <li>
+          <a class="text-link"
+            href=
+            "https://policies.google.com/privacy"
+            target="_blank">
+            Google Play Services
+          </a>
+          — app distribution and crash
+          reporting
+        </li>
+        <li>
+          <a class="text-link"
+            href=
+            "https://policies.google.com/privacy"
+            target="_blank">
+            Google User Messaging Platform
+            (UMP)
+          </a>
+          — GDPR consent management
+        </li>
+        <li>
+          <a class="text-link"
+            href=
+            "https://developers.google.com/ar/develop/privacy-requirements"
+            target="_blank">
+            Google ARCore
+          </a>
+          — Augmented Reality
+          (optional feature)
+        </li>
+      </ul>
+    </div>
 
-    <footer>
-        <p>© 2026 Trident Inc. All rights reserved.</p>
-    </footer>
+    <!-- 9. Changes -->
+    <div class="section">
+      <h2>
+        <span class="icon">📋</span>
+        9. Changes to This Policy
+      </h2>
+      <p>We may update this Privacy Policy
+        from time to time. Any changes will
+        be posted at this URL with an
+        updated "Last updated" date.</p>
+      <p>Continued use of the app after
+        changes are posted constitutes your
+        acceptance of the updated policy.
+        We encourage you to review this
+        page periodically.</p>
+    </div>
 
+    <!-- 10. Contact -->
+    <div class="contact-card">
+      <h2>10. Contact Us</h2>
+      <p>Have questions about this Privacy
+        Policy? We are happy to help.</p>
+      <a href=
+        "mailto:trident.inc01@gmail.com">
+        ✉&nbsp; trident.inc01@gmail.com
+      </a>
+    </div>
+
+    <div class="page-footer">
+      <p>© 2026 Trident Inc.
+        All rights reserved.
+        &nbsp;·&nbsp;
+        <a href="index.html">Home</a>
+        &nbsp;·&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.kks.app.tictactoe"
+          target="_blank">
+          Play Store
+        </a>
+      </p>
+    </div>
+
+  </div>
 </body>
 </html>
